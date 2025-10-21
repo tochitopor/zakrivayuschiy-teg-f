@@ -13,4 +13,12 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-image: var(--main-cover-image);;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.main {
+  display: grid;
+  gap: 150px
 }
