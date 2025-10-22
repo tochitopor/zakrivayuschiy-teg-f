@@ -15,4 +15,9 @@
         repeating-linear-gradient(
             #e7e7e7, 
             #1a1a1a);
+
+    --main-font: Inter-Variable; 
+    --main-font-weight-header: 715;
+    --main-font-weight-common: 410;
+    --accent-font: PressStart2P;
 }
