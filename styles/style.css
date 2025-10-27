@@ -13,6 +13,9 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  display: grid;
+  gap: 100px;
+  justify-items: center;
   font-family: var(--main-font), sans-serif;
   font-variation-settings: 'wght' var(--main-font-weight-common);
   background-image: var(--main-cover-image);
@@ -20,10 +23,51 @@
   background-size: cover;
 }
 
+.header {
+  height: clamp(327px, 312.56px + 3.85vw, 368px);
+  width: clamp(375px, 260.56px + 30.52vw, 700px);
+  display:grid;
+  gap: 20px;
+  justify-items: center;
+  margin-top: 100px;
+  font-family: var(--accent-font), sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  background-color: white;
+  border: black solid 2px;
+}
+
+.header_title {
+  align-self: end;
+  font-size: clamp(49px, 43.37px + 1.50vw, 65px);
+  line-height: 100%;/* вынес из .header что бы расчитывалось относительно этого размера шрифта*/
+}
+
+.header_text {
+  align-self: start;
+  font-size: clamp(14px, 10.83px + 0.85vw, 23px);
+  line-height: 100%;/* вынес из .header что бы расчитывалось относительно этого размера шрифта*/
+}
+
 .main {
-  display: grid;
-  gap: 150px;
   /*font-family: var(--accent-font), sans-serif;/**/
   /*font-family: var(--main-font), sans-serif;/**/
   font-weight: 650;
+}
+
+.main__card_list {
+  display: grid;
+  gap: 50px;
+}
+
+.main__card {
+  width: clamp(375px, 260.56px + 30.52vw, 700px);
+  background-color: white;
+  border: black solid 2px;
+}
+
+.bus {
+  width: 100%;
+  object-fit: cover;
 }
