@@ -24,8 +24,8 @@
 }
 
 .header {
-  height: clamp(327px, 312.56px + 3.85vw, 368px);
   width: clamp(375px, 260.56px + 30.52vw, 700px);
+  padding: clamp(122px, 119.18px + 0.75vw, 130px) 0;
   display:grid;
   gap: 20px;
   justify-items: center;
@@ -34,7 +34,9 @@
   font-weight: 400;
   letter-spacing: 0;
   background-color: white;
-  border: black solid 2px;
+  outline: 2px solid black;
+  outline-offset: -2px;
+  color: black;
 }
 
 .header_title {
@@ -50,6 +52,7 @@
 }
 
 .main {
+  width: clamp(375px, 260.56px + 30.52vw, 700px);
   /*font-family: var(--accent-font), sans-serif;/**/
   /*font-family: var(--main-font), sans-serif;/**/
   /*font-weight: 650;*/
@@ -61,7 +64,6 @@
 }
 
 .card {
-  width: clamp(375px, 260.56px + 30.52vw, 700px);
   background-color: white;
   border: black solid 2px;
   border-collapse: collapse;
@@ -76,8 +78,8 @@
 
 .card__picture {
   display: grid;
-  border-top: black solid 1px;
-  border-bottom: black solid 1px;
+  border-top: black solid 2px;
+  border-bottom: black solid 2px;
   position: relative;
 }
 
@@ -106,10 +108,16 @@
   font-size: 18px;
 }
 
+.card_buttons {
+  justify-self: end;
+}
+
 .card__like-button {
   width: 130px;
   height: 38px;
-  justify-self: end;
+  font-family: var(--accent-font), sans-serif;
+  font-size: 14px;
+  border: 2px solid black;
 }
 
 /*-------медиазапросу и прочие собаки-------*/
@@ -120,3 +128,13 @@
     text-stroke: 1px var(--stroke);/**/
   }
 } 
+
+@media (width >= 1440px) {
+  .page {
+    gap: 98px;
+  }
+
+  .header {
+      outline-offset: 0px;
+  }
+}
