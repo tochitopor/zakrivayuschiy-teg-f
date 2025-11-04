@@ -68,7 +68,7 @@
 }
 
 .card__header {
-  padding: 4px 10px;
+  padding: 5px 10px 4px;
   font-size: 18px;
   line-height: 120%;
   font-variation-settings: 'wght' var(--main-font-weight-header);/**/
@@ -76,8 +76,8 @@
 
 .card__picture {
   display: grid;
-  border-top: black solid 2px;
-  border-bottom: black solid 2px;
+  border-top: black solid 1px;
+  border-bottom: black solid 1px;
   position: relative;
 }
 
@@ -95,6 +95,8 @@
   font-size: 14px;
   text-shadow: 0 0 1px var(--stroke);
   color: black;
+  opacity: 0.5;/**/
+  mix-blend-mode: hard-light;/**/
 }
 
 .card__article {
@@ -111,8 +113,10 @@
 }
 
 /*-------медиазапросу и прочие собаки-------*/
-@supports (text-stroke: 1px var(--stroke)) {
+@supports (-webkit-text-stroke: 0.01px var(--stroke)) or (text-stroke: 1px var(--stroke)) {
   .watermark {
-    text-stroke: 1px var(--stroke);
+    text-shadow: none;/**/
+    -webkit-text-stroke: 0.01px var(--stroke);/**/
+    text-stroke: 1px var(--stroke);/**/
   }
 } 
