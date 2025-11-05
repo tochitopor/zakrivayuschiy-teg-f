@@ -42,8 +42,12 @@
               Место для ваших воспоминаний о начале обучения.
             </p>
             <div class="card_buttons">
-              <button class="like-icon">
-                <span class="button__text"></span>
+              <button class="card__heart-button">
+                <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none" viewBox="0 0 39 36">
+                  <path 
+                      fill="#000" 
+                      d="M12 6H9v3h3zM15 6h-3v3h3zM9 9H6v3h3zM9 12H6v3h3zM9 15H6v3h3zM18 6h-3v3h3zM12 18H9v3h3zM15 21h-3v3h3zM18 24h-3v3h3zM27 6h3v3h-3zM24 6h3v3h-3zM30 9h3v3h-3zM30 12h3v3h-3zM30 15h3v3h-3zM21 6h3v3h-3zM27 18h3v3h-3zM24 21h3v3h-3zM21 24h3v3h-3zM21 9h-3v3h3zM21 27h-3v3h3z"/>
+                  </svg>
               </button>
               <button class="card__like-button">
                 <span class="button__text">Like</span>
@@ -51,6 +55,7 @@
             </div>
           </article>
         </li>
+        <!--
         <li class="main__card">
           <h2>1 спринт: Я — чистый лист</h2>
         </li>
@@ -72,7 +77,18 @@
         <li class="main__card">
           <h2>«Сейчас я здесь»</h2>
         </li>
+        -->
       </ul>
+
+      <button class="save_to_floppy">
+        <!--
+        <svg class="svg_floppy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39">
+          <use href="./svg/floppy.svg#floppy" />
+        </svg>-->
+        <span class="button__text">
+          Сохранить на память
+        </span>
+      </button>
     </main>
     
     <script src="./scripts/like.js"></script>

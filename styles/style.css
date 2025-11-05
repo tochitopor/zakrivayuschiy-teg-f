@@ -56,6 +56,9 @@
   /*font-family: var(--accent-font), sans-serif;/**/
   /*font-family: var(--main-font), sans-serif;/**/
   /*font-weight: 650;*/
+  display: grid;/**/
+  justify-items: center;
+  gap: 50px;
 }
 
 .main__card_list {
@@ -109,7 +112,16 @@
 }
 
 .card_buttons {
+  display: flex;
   justify-self: end;
+  /*justify-items: end;/**/
+  /*align-items: end;/**/
+}
+
+.card__heart-button {
+  /*justify-items: end;/**/
+  border: none;/**/
+  background-color: transparent;
 }
 
 .card__like-button {
@@ -118,6 +130,21 @@
   font-family: var(--accent-font), sans-serif;
   font-size: 14px;
   border: 2px solid black;
+  background-color: transparent;
+}
+
+.save_to_floppy {
+  width: 306px;
+  height: 84px;
+  font-family: var(--accent-font), sans-serif;
+  font-size: 14px;
+  border: 2px solid black;
+}
+
+.svg_floppy {
+  /*display: block;
+  /*inline-size: 40px;
+  block-size: 40px;*/
 }
 
 /*-------медиазапросу и прочие собаки-------*/
