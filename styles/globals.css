@@ -22,7 +22,8 @@ p,
 ul,
 ol,
 li,
-figure {
+figure,
+form {
   margin: 0;
   padding: 0;
 }
