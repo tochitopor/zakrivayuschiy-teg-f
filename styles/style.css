@@ -135,16 +135,21 @@
 
 .save_to_floppy {
   width: 306px;
-  height: 84px;
+  /*height: 84px;/**/
+  display: grid;
+  justify-items: center;
+  padding: 15px 18px;
+  gap: 8px;
   font-family: var(--accent-font), sans-serif;
   font-size: 14px;
+  line-height: 90%;
   border: 2px solid black;
 }
 
 .svg_floppy {
-  /*display: block;
-  /*inline-size: 40px;
-  block-size: 40px;*/
+  /*display: block;/**/
+  width: 28px;/*clamp*/
+  height: 28px;/*clamp*/
 }
 
 /*-------медиазапросу и прочие собаки-------*/
