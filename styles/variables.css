@@ -22,4 +22,8 @@
     --accent-font: PressStart2P;
     --stroke: #fff;
     --width-to-block: clamp(375px, 260.56px + 30.52vw, 700px);
+    --main-border: 2px solid black;
+    --heart-contour-color: black;
+    --heart-sparks-color: transparent;
+    --heart-animation-color: red;
 }
