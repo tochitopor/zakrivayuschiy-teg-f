@@ -111,14 +111,13 @@
 }
 
 .card__buttons {
+  height: 38px;
   display: flex;
-  gap: 12px;
+  gap: 6px;
   justify-self: end;
 }
 
 .card__heart-button {
-  width: 27px;
-  height: 24px;
   padding: 0;
   align-self: center;
   justify-items: center;
