@@ -14,7 +14,6 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   display: grid;
-  gap: 100px;
   justify-items: center;
   font-family: var(--main-font), sans-serif;
   font-variation-settings: 'wght' var(--main-font-weight-common);
@@ -35,7 +34,7 @@
   letter-spacing: 0;
   background-color: white;
   outline: var(--main-border);
-  outline-offset: -2px;
+  outline-offset: 0px;
   color: black;
 }
 
@@ -51,11 +50,14 @@
   line-height: 100%;/* вынес из .header что бы расчитывалось относительно этого размера шрифта*/
 }
 
+/*-------тулово-------*/
 .main {
   width: var(--width-to-block);
   display: grid;
   justify-items: center;
   gap: 50px;
+  margin-top: 98px;
+  margin-bottom: 100px;
 }
 
 .main__card_list {
@@ -163,17 +165,19 @@
 }
 
 .button__text {
+  align-self: center;
   color:white;/*да блин, потому что 255-255=0*/
   position: relative;
   mix-blend-mode: difference;
   z-index: 2;
 }
 
+/*-------нижний батон-------*/
 .button_save {
-  width: 306px;
-  display: grid;
+  width: clamp(306px, 295.79px + 2.72vw, 335px);
+  display: flex;
   justify-items: center;
-  padding: 15px 18px;
+  padding: 15px 17px;
   gap: 8px;
   font-family: var(--accent-font), sans-serif;
   font-size: 14px;
@@ -183,13 +187,15 @@
 }
 
 .svg_floppy_small {
-  width: 28px;/*clamp*/
-  height: 28px;/*clamp*/
+  /* 28px, viewport: 375px -> 21px, viewport: 1440px */
+  width: clamp(21px, 30.46px + -0.66vw, 28px);
+  height: clamp(21px, 30.46px + -0.66vw, 28px);
 }
 
 .dialog {
   height: 191px;
-  padding: 30px 40px;
+  width: clamp(341px, 336.77px + 1.13vw, 353px);
+  padding: 30px 30px;
   font-family: var(--accent-font), sans-serif;
   font-size: 14px;
   border: var(--main-border);
@@ -328,12 +334,22 @@
   }
 } 
 
-@media (width >= 1440px) {
-  .page {
-    gap: 98px;
+
+@media (width <= 375px) {
+  .header {
+      outline-offset: -2px;
   }
 
-  .header {
-      outline-offset: 0px;
+  .main {
+    margin-top: 100px;
+  }
+
+  .button_save {
+    display: grid;
+    padding: 15px 18px;
+  }
+
+  .dialog {
+    padding: 30px 40px;
   }
 }
