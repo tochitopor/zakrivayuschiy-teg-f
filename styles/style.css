@@ -90,6 +90,34 @@
   object-fit: cover;
 }
 
+.filter_nedoocenka {
+  filter: brightness(200%);
+}
+
+.filter_samouverenost {
+  filter: saturate(200%);
+}
+
+.filter_rasplata {
+  filter: grayscale(1);
+}
+
+.filter_posledstviy {
+  filter: grayscale(1) blur(0.4em);
+}
+
+.filter_peresborka {
+  filter: sepia(80%) saturate(200%);
+}
+
+.filter_ispravlenie {
+  filter:hue-rotate(160deg) ;
+}
+
+.filter_udobno {
+  filter: hue-rotate(300deg) drop-shadow(5px 15px 3px rgba(0, 0, 0, 0.8));
+}
+
 .watermark {
   position: absolute;
   justify-self: end;
@@ -124,6 +152,15 @@
   border: none;
   background-color: transparent;
 }
+
+.card__heart-button:focus {
+  outline: none;
+} 
+
+.card__heart-button:focus-visible {
+  /*дописать правильную обработку*/
+  background-color: red;
+} 
 
 .card__like-button {
   width: 130px;
@@ -183,12 +220,45 @@
   line-height: 90%;
   border: var(--main-border);
   background-color: white;
+  position: relative;
+}
+
+.button_save::before{
+  content: "";
+  top: 0;    
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 0;
+  transition-property: width;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  background-color: black;
+}
+
+.button_save:hover::before{
+  width: 100%;
+  transition-property: width;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.button_save:focus {
+  box-shadow: 2px 2px 0 #000;
+  outline: none;
+  transition-property: box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: easy; /*значение по умолчанию, но пусть будет*/
 }
 
 .svg_floppy_small {
   /* 28px, viewport: 375px -> 21px, viewport: 1440px */
   width: clamp(21px, 30.46px + -0.66vw, 28px);
   height: clamp(21px, 30.46px + -0.66vw, 28px);
+  color:white;
+  position: relative;
+  mix-blend-mode: difference;
+  z-index: 2;
 }
 
 .dialog {
