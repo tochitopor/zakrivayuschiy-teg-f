@@ -147,19 +147,26 @@
 
 .card__heart-button {
   padding: 0;
-  align-self: center;
-  justify-items: center;
+  width: 38px;
+  height: 38px;
   border: none;
   background-color: transparent;
 }
 
 .card__heart-button:focus {
   outline: none;
+  border:0;
 } 
 
 .card__heart-button:focus-visible {
-  /*дописать правильную обработку*/
-  background-color: red;
+  /*outline: var(--main-border);
+  outline-offset: -2px;*/
+  border: var(--main-border);
+  transition-property: border;
+  transition-duration: 3s;
+  transition-timing-function: easy; /*значение по умолчанию, но пусть будет*/
+  background-color: aqua;
+/*!!!!!!тут прям все переделать!!!!!!!!*/
 } 
 
 .card__like-button {
@@ -308,10 +315,39 @@
   line-height: 90%;
   border: var(--main-border);
   background-color: transparent;
+  position: relative;
+}
+
+.dialog__button::before{
+  content: "";
+  top: 0;    
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 0;
+  transition-property: width;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  background-color: black;
+}
+
+.dialog__button:hover::before{
+  width: 100%;
+  transition-property: width;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.dialog__button:focus {
+  box-shadow: 2px 2px 0 #000;
+  outline: none;
+  transition-property: box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: easy; /*значение по умолчанию, но пусть будет*/
 }
 
 .svg_floppy_big {
-  width: 39px;/*clamp*/
+  width: 39px;
 }
 
 
