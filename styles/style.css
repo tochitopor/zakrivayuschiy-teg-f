@@ -149,24 +149,19 @@
   padding: 0;
   width: 38px;
   height: 38px;
-  border: none;
+  border: 2px solid transparent;
   background-color: transparent;
 }
 
 .card__heart-button:focus {
   outline: none;
-  border:0;
 } 
 
 .card__heart-button:focus-visible {
-  /*outline: var(--main-border);
-  outline-offset: -2px;*/
   border: var(--main-border);
-  transition-property: border;
-  transition-duration: 3s;
-  transition-timing-function: easy; /*значение по умолчанию, но пусть будет*/
-  background-color: aqua;
-/*!!!!!!тут прям все переделать!!!!!!!!*/
+  transition-property: border-color;
+  transition-duration: 0.3s;
+  transition-timing-function: easy; 
 } 
 
 .card__like-button {
