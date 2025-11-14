@@ -155,14 +155,14 @@
 
 .card__heart-button:focus {
   outline: none;
-} 
+}
 
 .card__heart-button:focus-visible {
   border: var(--main-border);
   transition-property: border-color;
   transition-duration: 0.3s;
-  transition-timing-function: easy; 
-} 
+  transition-timing-function: easy;
+}
 
 .card__like-button {
   width: 130px;
@@ -176,7 +176,7 @@
 
 .card__like-button::before {
   content: "";
-  top: 0;    
+  top: 0;
   left: 0;
   position: absolute;
   height: 100%;
@@ -227,7 +227,7 @@
 
 .button_save::before {
   content: "";
-  top: 0;    
+  top: 0;
   left: 0;
   position: absolute;
   height: 100%;
@@ -315,7 +315,7 @@
 
 .dialog__button::before {
   content: "";
-  top: 0;    
+  top: 0;
   left: 0;
   position: absolute;
   height: 100%;
