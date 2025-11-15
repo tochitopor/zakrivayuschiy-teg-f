@@ -206,6 +206,10 @@
 }
 
 .card__like-button:focus {
+  outline: none;
+}
+
+.card__like-button:focus-visible {
   box-shadow: 2px 2px 0 #000;
   outline: none;
   transition-property: box-shadow;
@@ -259,6 +263,10 @@
 }
 
 .button-save:focus {
+  outline: none;
+}
+
+.button-save:focus-visible {
   box-shadow: 2px 2px 0 #000;
   outline: none;
   transition-property: box-shadow;
@@ -350,6 +358,10 @@
 }
 
 .dialog__button:focus {
+  outline: none;
+}
+
+.dialog__button:focus-visible {
   box-shadow: 2px 2px 0 #000;
   outline: none;
   transition-property: box-shadow;
