@@ -200,9 +200,6 @@
 
 .card__like-button:hover::before {
   width: 100%;
-  transition-property: width;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in-out;
 }
 
 .card__like-button:focus {
@@ -257,9 +254,6 @@
 
 .button-save:hover::before {
   width: 100%;
-  transition-property: width;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in-out;
 }
 
 .button-save:focus {
@@ -352,9 +346,6 @@
 
 .dialog__button:hover::before {
   width: 100%;
-  transition-property: width;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in-out;
 }
 
 .dialog__button:focus {
