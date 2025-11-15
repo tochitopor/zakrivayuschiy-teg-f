@@ -152,6 +152,8 @@
   border: 2px solid transparent;
   background-color: transparent;
   cursor: pointer;
+  transition-property: border-color;
+  transition-duration: 0.3s;
 }
 
 .card__heart-button:focus {
@@ -173,6 +175,8 @@
   background-color: transparent;
   position: relative;
   cursor: pointer;
+  transition-property: box-shadow;
+  transition-duration: 0.3s;
 }
 
 .card__like-button::before {
@@ -224,6 +228,8 @@
   background-color: white;
   position: relative;
   cursor: pointer;
+  transition-property: box-shadow;
+  transition-duration: 0.3s;
 }
 
 .button-save::before {
@@ -312,6 +318,8 @@
   background-color: transparent;
   position: relative;
   cursor: pointer;
+  transition-property: box-shadow;
+  transition-duration: 0.3s;
 }
 
 .dialog__button::before {
