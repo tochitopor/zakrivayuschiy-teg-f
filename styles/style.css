@@ -10,6 +10,15 @@
 
 */
 
+/*-------общие классы-------*/
+.button {
+  border: var(--main-border);
+  background-color: transparent;
+  cursor: pointer;
+  transition-property: box-shadow;
+  transition-duration: 0.3s;
+}
+
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -22,6 +31,8 @@
   background-size: cover;
   background-position: center;
 }
+
+/*-------шапка-------*/
 
 .header {
   width: var(--width-to-block, 375px);
@@ -156,10 +167,7 @@
   width: 38px;
   height: 38px;
   border: 2px solid transparent;
-  background-color: transparent;
-  cursor: pointer;
   transition-property: border-color;
-  transition-duration: 0.3s;
 }
 
 .card__heart-button:focus {
@@ -168,7 +176,6 @@
 
 .card__heart-button:focus-visible {
   border: var(--main-border);
-  transition-property: border-color;
   transition-duration: 0.3s;
 }
 
@@ -177,12 +184,7 @@
   min-height: 38px;
   font-family: var(--accent-font, sans-serif);
   font-size: 14px;
-  border: var(--main-border);
-  background-color: transparent;
   position: relative;
-  cursor: pointer;
-  transition-property: box-shadow;
-  transition-duration: 0.3s;
 }
 
 .card__like-button::before {
@@ -231,12 +233,8 @@
   font-family: var(--accent-font, sans-serif);
   font-size: 14px;
   line-height: 90%;
-  border: var(--main-border);
   background-color: white;
   position: relative;
-  cursor: pointer;
-  transition-property: box-shadow;
-  transition-duration: 0.3s;
 }
 
 .button-save::before {
@@ -264,7 +262,6 @@
   box-shadow: 2px 2px 0 #000;
   outline: none;
   transition-property: box-shadow;
-  transition-duration: 0.3s;
 }
 
 .svg-floppy-small {
@@ -322,12 +319,7 @@
   width: 100%;
   padding: 9px 17px;
   line-height: 90%;
-  border: var(--main-border);
-  background-color: transparent;
   position: relative;
-  cursor: pointer;
-  transition-property: box-shadow;
-  transition-duration: 0.3s;
   text-transform: uppercase;
 }
 
@@ -355,8 +347,6 @@
 .dialog__button:focus-visible {
   box-shadow: 2px 2px 0 #000;
   outline: none;
-  transition-property: box-shadow;
-  transition-duration: 0.3s;
 }
 
 .svg-floppy-big {
