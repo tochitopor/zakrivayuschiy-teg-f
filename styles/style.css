@@ -38,13 +38,13 @@
   color: black;
 }
 
-.header_title {
+.header-title {
   align-self: end;
   font-size: clamp(49px, 43.37px + 1.50vw, 65px);
   line-height: 100%;/* вынес из .header что бы расчитывалось относительно этого размера шрифта*/
 }
 
-.header_text {
+.header-text {
   align-self: start;
   font-size: clamp(14px, 10.83px + 0.85vw, 23px);
   line-height: 100%;/* вынес из .header что бы расчитывалось относительно этого размера шрифта*/
@@ -60,7 +60,7 @@
   margin-bottom: 100px;
 }
 
-.main__card_list {
+.main__card-list {
   display: grid;
   gap: 50px;
 }
@@ -90,31 +90,31 @@
   object-fit: cover;
 }
 
-.filter_nedoocenka {
+.filter-nedoocenka {
   filter: brightness(200%);
 }
 
-.filter_samouverenost {
+.filter-samouverenost {
   filter: saturate(200%);
 }
 
-.filter_rasplata {
+.filter-rasplata {
   filter: grayscale(1);
 }
 
-.filter_posledstviy {
+.filter-posledstviy {
   filter: grayscale(1) blur(0.4em);
 }
 
-.filter_peresborka {
+.filter-peresborka {
   filter: sepia(80%) saturate(200%);
 }
 
-.filter_ispravlenie {
+.filter-ispravlenie {
   filter:hue-rotate(160deg) ;
 }
 
-.filter_udobno {
+.filter-udobno {
   filter: hue-rotate(300deg) drop-shadow(5px 15px 3px rgba(0, 0, 0, 0.8));
 }
 
@@ -211,7 +211,7 @@
 }
 
 /*-------нижний батон-------*/
-.button_save {
+.button-save {
   width: clamp(306px, 295.79px + 2.72vw, 335px);
   display: flex;
   justify-items: center;
@@ -225,7 +225,7 @@
   position: relative;
 }
 
-.button_save::before {
+.button-save::before {
   content: "";
   top: 0;
   left: 0;
@@ -238,14 +238,14 @@
   background-color: black;
 }
 
-.button_save:hover::before {
+.button-save:hover::before {
   width: 100%;
   transition-property: width;
   transition-duration: 0.5s;
   transition-timing-function: ease-in-out;
 }
 
-.button_save:focus {
+.button-save:focus {
   box-shadow: 2px 2px 0 #000;
   outline: none;
   transition-property: box-shadow;
@@ -253,7 +253,7 @@
   transition-timing-function: easy; /*значение по умолчанию, но пусть будет*/
 }
 
-.svg_floppy_small {
+.svg-floppy-small {
   /* 28px, viewport: 375px -> 21px, viewport: 1440px */
   width: clamp(21px, 30.46px + -0.66vw, 28px);
   height: clamp(21px, 30.46px + -0.66vw, 28px);
@@ -341,7 +341,7 @@
   transition-timing-function: easy; /*значение по умолчанию, но пусть будет*/
 }
 
-.svg_floppy_big {
+.svg-floppy-big {
   width: 39px;
 }
 
@@ -423,12 +423,12 @@
 }
 
 .like-icon.is-liked .sparks {
-  animation: sparks_anim 0.3s 0.3s ease-in;
+  animation: sparks-anim 0.3s 0.3s ease-in;
 }
 
 .like-icon.is-liked .heart {
 	transform-origin: center;
-	animation: heart_anim 0.3s 0.1s ease-in;
+	animation: heart-anim 0.3s 0.1s ease-in;
 }
 
 
@@ -452,7 +452,7 @@
     margin-top: 100px;
   }
 
-  .button_save {
+  .button-save {
     display: grid;
     padding: 15px 18px;
   }
