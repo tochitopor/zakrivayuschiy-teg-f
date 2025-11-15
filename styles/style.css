@@ -276,7 +276,10 @@
 }
 
 .dialog {
-  height: 192px;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 30px;
   width: clamp(341px, 336.77px + 1.13vw, 353px);
   padding: 30px 30px;
   font-family: var(--accent-font, sans-serif);
@@ -287,10 +290,6 @@
 
 .dialog[open] {
   display: grid;
-  grid-template-columns: min-content 1fr;
-  grid-template-rows: 1fr 1fr;
-  column-gap: 20px;
-  row-gap: 30px;
 }
 
 .dialog::backdrop {
