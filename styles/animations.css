@@ -10,7 +10,7 @@
 
 */
 
-@keyframes heart-anim {
+@keyframes increase {
     from {
         transform: scale(1);
     }
@@ -20,7 +20,7 @@
     }
 }
 
-@keyframes sparks-anim {
+@keyframes flash {
     from {
         opacity: 0;
     }

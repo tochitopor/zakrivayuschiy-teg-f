@@ -424,12 +424,12 @@
 }
 
 .like-icon.is-liked .sparks {
-  animation: sparks-anim 0.3s 0.3s ease-in;
+  animation: flash 0.3s 0.3s ease-in;
 }
 
 .like-icon.is-liked .heart {
 	transform-origin: center;
-	animation: heart-anim 0.3s 0.1s ease-in;
+	animation: increase 0.3s 0.1s ease-in;
 }
 
 
