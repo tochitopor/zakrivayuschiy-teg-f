@@ -19,6 +19,8 @@
   transition-duration: 0.3s;
   position: relative;
   font-family: var(--accent-font, sans-serif);
+  font-size: 14px;
+  line-height: 90%;
 }
 
 .page {
@@ -184,7 +186,6 @@
 .card__like-button {
   min-width: 130px;
   min-height: 38px;
-  font-size: 14px;
 }
 
 .card__like-button::before {
@@ -229,8 +230,6 @@
   justify-items: center;
   padding: 15px 20px;
   gap: 8px;
-  font-size: 14px;
-  line-height: 90%;
   background-color: white;
 }
 
@@ -314,7 +313,6 @@
 .dialog__button {
   width: 100%;
   padding: 9px 17px;
-  line-height: 90%;
   text-transform: uppercase;
 }
 
