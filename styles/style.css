@@ -26,7 +26,7 @@
   justify-items: center;
   font-family: var(--main-font, sans-serif);
   font-variation-settings: 'wght' var(--main-font-weight-common, 410);
-  background-image: var(--main-cover-image, grey);
+  background-image: var(--main-cover-image);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -225,10 +225,10 @@
 
 /*-------нижний батон-------*/
 .button-save {
-  width: clamp(306px, 295.79px + 2.72vw, 335px);
+  /*width: clamp(306px, 295.79px + 2.72vw, 335px);/**/
   display: flex;
   justify-items: center;
-  padding: 15px 17px;
+  padding: 15px 20px;
   gap: 8px;
   font-family: var(--accent-font, sans-serif);
   font-size: 14px;
@@ -266,8 +266,10 @@
 
 .svg-floppy-small {
   /* 28px, viewport: 375px -> 21px, viewport: 1440px */
-  width: clamp(21px, 30.46px + -0.66vw, 28px);
-  height: clamp(21px, 30.46px + -0.66vw, 28px);
+  /*width: clamp(21px, 30.46px + -0.66vw, 28px);
+  height: clamp(21px, 30.46px + -0.66vw, 28px);*/
+  width: 21px;
+  height: 21px;
   color:white;
   position: relative;
   mix-blend-mode: difference;
@@ -462,6 +464,11 @@
   .button-save {
     display: grid;
     padding: 15px 18px;
+  }
+
+  .svg-floppy-small {
+    width: 28px;
+    height: 28px;
   }
 
   .dialog {
