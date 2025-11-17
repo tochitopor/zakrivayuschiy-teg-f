@@ -23,6 +23,34 @@
   line-height: 90%;
 }
 
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 #000;
+  outline: none;
+  transition-property: box-shadow;
+  transition-duration: 0.3s;
+}
+
+.button::before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 0;
+  transition-property: width;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  background-color: black;
+}
+
+.button:hover::before {
+  width: 100%;
+}
+
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -170,8 +198,10 @@
   padding: 0;
   width: 38px;
   height: 38px;
-  border-color: transparent;
+  transition-duration: 0.3s;
   transition-property: border-color;
+  border-color: transparent;
+  background-color: transparent;
 }
 
 .card__heart-button:focus {
@@ -180,40 +210,11 @@
 
 .card__heart-button:focus-visible {
   border-color: black;
-  transition-duration: 0.3s;
 }
 
 .card__like-button {
   min-width: 130px;
   min-height: 38px;
-}
-
-.card__like-button::before {
-  content: "";
-  top: 0;
-  left: 0;
-  position: absolute;
-  height: 100%;
-  width: 0;
-  transition-property: width;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in-out;
-  background-color: black;
-}
-
-.card__like-button:hover::before {
-  width: 100%;
-}
-
-.card__like-button:focus {
-  outline: none;
-}
-
-.card__like-button:focus-visible {
-  box-shadow: 2px 2px 0 #000;
-  outline: none;
-  transition-property: box-shadow;
-  transition-duration: 0.3s;
 }
 
 .button__text {
@@ -231,33 +232,6 @@
   padding: 15px 20px;
   gap: 8px;
   background-color: white;
-}
-
-.button-save::before {
-  content: "";
-  top: 0;
-  left: 0;
-  position: absolute;
-  height: 100%;
-  width: 0;
-  transition-property: width;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in-out;
-  background-color: black;
-}
-
-.button-save:hover::before {
-  width: 100%;
-}
-
-.button-save:focus {
-  outline: none;
-}
-
-.button-save:focus-visible {
-  box-shadow: 2px 2px 0 #000;
-  outline: none;
-  transition-property: box-shadow;
 }
 
 .svg-floppy-small {
@@ -316,50 +290,21 @@
   text-transform: uppercase;
 }
 
-.dialog__button::before {
-  content: "";
-  top: 0;
-  left: 0;
-  position: absolute;
-  height: 100%;
-  width: 0;
-  transition-property: width;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in-out;
-  background-color: black;
-}
-
-.dialog__button:hover::before {
-  width: 100%;
-}
-
-.dialog__button:focus {
-  outline: none;
-}
-
-.dialog__button:focus-visible {
-  box-shadow: 2px 2px 0 #000;
-  outline: none;
-}
-
 .svg-floppy-big {
   width: 39px;
 }
-
 
 /*-------стили для svg сердце-------*/
 .contour {
   fill: var(--heart-contour-color, black);
   transition-duration: 0.1s;
   transition-delay: 0s;
-  transition-timing-function: linear;
 }
 
 .like-icon.is-liked .contour {
   fill: var(--heart-animation-color, red);
   transition-duration: 0.3s;
   transition-delay: 0.06s;
-  transition-timing-function: linear;
 }
 
 .main-body {
@@ -371,23 +316,17 @@
 
 .like-icon:hover .main-body {
   fill: black;
-  transition-duration: 0.3s;
   transition-delay: 0.05s;
-  transition-timing-function: linear;
 }
 
 .like-icon:active .main-body {
   fill: var(--heart-animation-color, red);
-  transition-duration: 0.3s;
   transition-delay: 0.05s;
-  transition-timing-function: linear;
 }
 
 .like-icon.is-liked .main-body {
   fill: var(--heart-animation-color, red);
-  transition-duration: 0.3s;
   transition-delay: 0.05s;
-  transition-timing-function: linear;
 }
 
 .core {
@@ -399,23 +338,17 @@
 
 .like-icon:hover .core {
   fill: black;
-  transition-duration: 0.3s;
   transition-delay: 0s;
-  transition-timing-function: linear;
 }
 
 .like-icon:active .core {
   fill: var(--heart-animation-color, red);
-  transition-duration: 0.3s;
   transition-delay: 0s;
-  transition-timing-function: linear;
 }
 
 .like-icon.is-liked .core {
   fill: var(--heart-animation-color, red);
-  transition-duration: 0.3s;
   transition-delay: 0s;
-  transition-timing-function: linear;
 }
 
 .sparks {
